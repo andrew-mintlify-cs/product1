@@ -1,0 +1,35 @@
+---
+title: "Configuration"
+description: "Configure Product1 for production deployments."
+---
+
+Product1 reads configuration from `product1.yaml` in the working directory.
+
+## Example configuration
+
+```yaml product1.yaml
+server:
+  port: 9090
+  workers: 8
+
+datastore:
+  mode: in-memory
+  partitions: 16
+
+connectors:
+  - type: parquet
+    path: /data/trades
+```
+
+## Configuration reference
+
+| Key | Default | Description |
+| --- | --- | --- |
+| `server.port` | `9090` | HTTP port for the query API. |
+| `server.workers` | `4` | Number of query worker threads. |
+| `datastore.mode` | `in-memory` | Storage mode: `in-memory` or `direct-query`. |
+| `datastore.partitions` | `8` | Number of data partitions. |
+
+<Warning>
+  Changing `datastore.partitions` requires a full restart and data reload.
+</Warning>

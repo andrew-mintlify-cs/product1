@@ -1,0 +1,28 @@
+---
+title: "Python SDK quickstart"
+description: "Install the Product1 Python SDK and run your first session."
+---
+
+The Product1 Python SDK lets you build and query cubes from Python.
+
+## Install
+
+```bash
+pip install product1
+```
+
+## Create a session
+
+```python
+import product1 as p1
+
+session = p1.Session.start()
+table = session.read_parquet("trades.parquet", table_name="Trades")
+cube = session.create_cube(table)
+
+cube.query(cube.measures["notional.SUM"], levels=[cube.levels["desk"]])
+```
+
+<Info>
+  The SDK requires Python 3.10 or later.
+</Info>

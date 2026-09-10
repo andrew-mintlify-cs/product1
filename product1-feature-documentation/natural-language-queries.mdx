@@ -1,0 +1,29 @@
+---
+title: "Natural language queries"
+description: "Query Product1 data using plain English."
+---
+
+Natural language queries let analysts ask questions without writing MDX or SQL.
+
+## Enable the feature
+
+Add the following to your `product1.yaml`:
+
+```yaml product1.yaml
+features:
+  natural-language-queries:
+    enabled: true
+    model: default
+```
+
+## Example
+
+```text
+"What was the total notional by desk for the last 5 business days?"
+```
+
+The engine translates the question into an MDX query, executes it, and returns both the result set and the generated query for review.
+
+<Tip>
+  Review generated queries before saving them to dashboards to confirm they match your intent.
+</Tip>

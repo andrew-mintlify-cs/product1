@@ -1,0 +1,21 @@
+---
+title: "Python SDK API reference"
+description: "Core classes and methods in the Product1 Python SDK."
+---
+
+## Session
+
+| Method | Description |
+| --- | --- |
+| `Session.start()` | Start a local Product1 session. |
+| `session.read_parquet(path, table_name)` | Load a Parquet file into a table. |
+| `session.read_sql(query, url, table_name)` | Load the result of a SQL query into a table. |
+| `session.create_cube(table)` | Create a cube from a table. |
+
+## Cube
+
+| Method | Description |
+| --- | --- |
+| `cube.query(*measures, levels)` | Run an aggregation query and return a DataFrame. |
+| `cube.measures` | Dictionary of available measures. |
+| `cube.levels` | Dictionary of available levels. |

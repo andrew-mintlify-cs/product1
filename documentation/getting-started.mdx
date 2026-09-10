@@ -1,0 +1,28 @@
+---
+title: "Getting started"
+description: "Deploy a local Product1 instance and run your first query."
+---
+
+Follow these steps to run Product1 locally.
+
+<Steps>
+  <Step title="Install the CLI">
+    ```bash
+    npm install -g product1-cli
+    ```
+  </Step>
+  <Step title="Start a local instance">
+    ```bash
+    product1 start --local
+    ```
+  </Step>
+  <Step title="Run your first query">
+    ```bash
+    product1 query "SELECT * FROM sample_trades LIMIT 10"
+    ```
+  </Step>
+</Steps>
+
+<Check>
+  Your local instance is running at `http://localhost:9090`.
+</Check>

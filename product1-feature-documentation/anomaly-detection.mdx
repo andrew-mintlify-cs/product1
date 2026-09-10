@@ -1,0 +1,28 @@
+---
+title: "Anomaly detection"
+description: "Automatically detect unusual patterns in aggregated data."
+---
+
+Anomaly detection monitors aggregated measures and flags values that deviate from expected ranges.
+
+## How it works
+
+1. You select measures to monitor and a sensitivity threshold.
+2. The engine builds a baseline from historical aggregations.
+3. New data points outside the expected range trigger alerts.
+
+## Configure an alert
+
+```yaml product1.yaml
+features:
+  anomaly-detection:
+    enabled: true
+    monitors:
+      - measure: pnl.SUM
+        sensitivity: high
+        notify: risk-team@example.com
+```
+
+<Note>
+  Alerts are evaluated on each incremental data load, not on a fixed schedule.
+</Note>
