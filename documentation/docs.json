@@ -10,7 +10,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Engine",
+        "tab": "Engine components",
         "dropdowns": [
           {
             "dropdown": "Data extraction engine",
