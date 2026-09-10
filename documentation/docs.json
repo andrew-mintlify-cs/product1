@@ -11,27 +11,31 @@
     "tabs": [
       {
         "tab": "Engine",
-        "groups": [
+        "dropdowns": [
           {
-            "group": "Data extraction engine",
+            "dropdown": "Data extraction engine",
+            "icon": "database",
             "pages": [
               "data-extraction-engine/overview",
               "data-extraction-engine/configuration"
             ]
           },
           {
-            "group": "Data load controller",
+            "dropdown": "Data load controller",
+            "icon": "upload",
             "pages": [
               "data-load-controller/overview",
               "data-load-controller/getting-started"
             ]
           },
           {
-            "group": "Java SDK",
+            "dropdown": "Java SDK",
+            "icon": "coffee",
             "pages": ["java-sdk/overview"]
           },
           {
-            "group": "Internal",
+            "dropdown": "Internal",
+            "icon": "lock",
             "pages": ["internal/architecture"]
           }
         ]
