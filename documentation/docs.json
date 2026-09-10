@@ -1,0 +1,41 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Product1 Engine",
+  "colors": {
+    "primary": "#2563EB",
+    "light": "#60A5FA",
+    "dark": "#1D4ED8"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Engine",
+        "groups": [
+          {
+            "group": "Data extraction engine",
+            "pages": [
+              "data-extraction-engine/overview",
+              "data-extraction-engine/configuration"
+            ]
+          },
+          {
+            "group": "Data load controller",
+            "pages": [
+              "data-load-controller/overview",
+              "data-load-controller/getting-started"
+            ]
+          },
+          {
+            "group": "Java SDK",
+            "pages": ["java-sdk/overview"]
+          },
+          {
+            "group": "Internal",
+            "pages": ["internal/architecture"]
+          }
+        ]
+      }
+    ]
+  }
+}

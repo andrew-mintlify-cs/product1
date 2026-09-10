@@ -1,0 +1,25 @@
+---
+title: "Java SDK"
+description: "Build on the Product1 engine with the Java SDK."
+---
+
+The Java SDK is the lowest-level interface to the engine. Use it to define custom data models, aggregation functions, and post-processors.
+
+## Add the dependency
+
+```xml pom.xml
+<dependency>
+  <groupId>com.example.product1</groupId>
+  <artifactId>product1-engine</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
+## Define a cube
+
+```java
+Cube cube = CubeBuilder.create("Trades")
+    .withMeasure("notional", Aggregations.SUM)
+    .withHierarchy("Desk", "desk")
+    .build();
+```

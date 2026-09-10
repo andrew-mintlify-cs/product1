@@ -1,0 +1,20 @@
+---
+title: "Internal architecture"
+description: "Internal notes on the Product1 engine architecture."
+---
+
+<Warning>
+  This section is intended for internal engineering reference.
+</Warning>
+
+## Components
+
+- **Query planner**: parses queries and builds execution plans against cube partitions.
+- **Aggregation workers**: execute plan fragments in parallel across partitions.
+- **Commit log**: orders incremental updates so queries see consistent snapshots.
+
+## Data flow
+
+1. The load controller writes records to the commit log.
+2. Aggregation workers apply committed records to in-memory partitions.
+3. The query planner routes incoming queries to the affected partitions.
